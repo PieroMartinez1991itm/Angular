@@ -1,0 +1,13 @@
+h2{
+    font-size: 5em;
+    text-align:center;
+    text-transform: uppercase;
+}
+div{
+width: 50%;
+  display: block;
+  margin-left: 4em;
+  margin-right: 3em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}

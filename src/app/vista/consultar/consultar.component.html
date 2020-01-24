@@ -1,0 +1,23 @@
+<h2>Calcular sueldo trabajador</h2>
+<form (submit)="submit()" class="form-inline" > 
+
+
+<label for="id">ID:</label>
+<input placeholder="ID" type="number" id="id" name="id"[(ngModel)]="id" #clave="ngModel" required>
+
+    <div class="alert alert-danger" *ngIf="clave.invalid && (clave.dirty || clave.touched)">
+     <div  *ngIf="clave.errors.required">
+        El id es obligatorio
+     </div>
+    </div>
+    
+
+<label for="ipc">IPC:</label>
+<input placeholder="IPC" type="number" id="ipc" name="ipc"[(ngModel)]="ipc">
+
+
+<h5>
+Sueldo mas Ipc : {{ipc * consulta.data[id-1].employee_salary}}€
+</h5>
+</form>
+<button class="btn btn-primary" (click) = "ver1Empleado()" >Calcular</button>

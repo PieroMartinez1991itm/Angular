@@ -1,0 +1,25 @@
+<div>
+<h2>Listado de Empleados</h2>
+
+<button class="btn btn-info" (click) = "verListadoEmployees()">Listado Completo</button>
+
+<table class="table table-striped" >
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Salario</th> 
+        <th>Años</th>
+        <th>Foto</th>
+    </tr>
+
+      <tr *ngFor = "let lista of consulta.data">
+          
+      <td>{{lista.id}}</td>
+      <td>{{lista.employee_name}}</td>
+      <td>{{lista.employee_salary}}</td>
+      <td>{{lista.employee_age}}</td>
+      <td>{{lista.profile_image}}</td>
+    
+    </tr>
+    </table>
+</div>
