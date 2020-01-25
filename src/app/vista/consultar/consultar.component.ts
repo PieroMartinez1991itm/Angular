@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DummyService } from 'src/app/servicios/dummy.service';
-import { Employee } from 'src/app/modelo/employee';
 
 @Component({
   selector: 'app-consultar',
@@ -13,9 +12,7 @@ export class ConsultarComponent implements OnInit {
   id :number ;
   ipc:number;
 
- // empleado : Employee = {id:0,employee_name:'',employee_salary: 0,employee_age:0 ,profile_image:''}
 
-  
 
   constructor(private ds:DummyService) { 
     
@@ -29,9 +26,11 @@ export class ConsultarComponent implements OnInit {
 
   ver1Empleado()
   {
-
+      //aquí nos trae la consulta especifica de la Api que queremos mostrar por connsola y para el componente html
       //this.ds.listadoCompleto().subscribe(lista=>{this.consulta=lista, console.log(this.consulta.data[this.id-1])});
-      this.ds.listadoCompleto1().subscribe(lista=>{this.consulta=lista, this.consulta.data[this.id-1]});
+     
+      //aquí nos trae la consulta especifica de la Api que usaremos en el componente html.
+      this.ds.listadoCompleto().subscribe(lista=>{this.consulta=lista, this.consulta.data[this.id-1]});
 
   }
 

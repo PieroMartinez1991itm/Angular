@@ -1,43 +1,43 @@
 
-<div class="container">
+<div class="container" style="background-color: rgb(6, 88, 27);">
     <div class="row">
-      <div class="col-6 offset-3">
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="col-6 offset-3" style="background-color: #31b347;">
+        <nav class="navbar navbar-light" >
         <h1>Examen Angular</h1>
             <ul class="nav-item">
-                <li class="nav-item">
+                <a class="nav-item">
                     <button class="m-1 btn btn-light btn-outline-primary" Button label ="lista"
                     (click) = "lista=false; lista1=true">
                         Trabajadores
                     </button>
-                </li>
+                </a>
 
-                <li class="nav-item">
+                <a class="nav-item">
                     <button class="m-1 btn btn-light btn-outline-primary" Button label ="lista1"
                     (click) = "lista=true; lista1=false">
                         Buscar
                     </button>
-                </li>
+                </a>
             </ul>
         </nav>
         <app-consultar *ngIf="lista"></app-consultar>
         <app-listado *ngIf="lista1"></app-listado>
 
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-light" >
             <ul class="nav-item">
-                <li class="nav-item">
+                <a class="nav-item">
                     <button class="m-1 btn btn-light btn-outline-primary" Button label ="madrid"
                     (click) = "madrid=false; toledo=true">
                         Toledo
                     </button>
-                </li>
+                </a>
 
-                <li class="nav-item">
+                <a class="nav-item">
                     <button class="m-1 btn btn-light btn-outline-primary" Button label ="toledo"
                     (click) = "madrid=true; toledo=false">
                         Madrid
                     </button>
-                </li>
+                </a>
             </ul>
         </nav>
   

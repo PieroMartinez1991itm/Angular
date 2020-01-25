@@ -9,8 +9,7 @@ import { DummyService } from 'src/app/servicios/dummy.service';
 export class ListadoComponent implements OnInit {
   consulta = null;
   
- //e:Employee = {id:'',employee_name:'',employee_salary:'',employee_age:'',profile_image:''}
-
+ 
 
   constructor(private ds:DummyService) { 
     
@@ -23,7 +22,10 @@ export class ListadoComponent implements OnInit {
   verListadoEmployees()
   {
 
+    //cuando quise mostrar la lista que recogo de la Api y no me dejaba recorrerla como array, la pase a array.
     //this.ds.listadoCompleto().subscribe(lista=>{this.consulta=lista;this.consulta = Array.of(this.consulta)});
+  
+    //la solucion la hice en la parte html. recorriendo consulta.data donde ahi se ecnontraba la array de los objetos.
     this.ds.listadoCompleto().subscribe(lista=>{console.log(this.consulta=lista)});
 
   }

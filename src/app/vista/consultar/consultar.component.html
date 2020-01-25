@@ -1,5 +1,8 @@
+<div >
+
 <h2>Calcular sueldo trabajador</h2>
-<form (submit)="submit()" class="form-inline" > 
+
+<form (submit)="submit()" class="form-inline" #formu="ngForm"> 
 
 
 <label for="id">ID:</label>
@@ -20,4 +23,5 @@
 Sueldo mas Ipc : {{ipc * consulta.data[id-1].employee_salary}}€
 </h5>
 </form>
-<button class="btn btn-primary" (click) = "ver1Empleado()" >Calcular</button>
+<button class="btn btn-primary" (click) = "ver1Empleado()"[disabled]="!formu.form.valid" >Calcular</button>
+</div>
